@@ -9,14 +9,12 @@ This project implements an Elevator Controller in Verilog, providing a digital s
 - [Features](#features)
 - [System Architecture](#system-architecture)
 - [Simulation](#simulation)
+- [RTL](#rtl)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
-The Elevator Controller project is aimed at providing a digital solution for controlling the movement of an elevator within a building. It uses Verilog hardware description language to model the elevator controller's behavior.
+The Elevator Controller using verilog is aimed at providing a digital solution for controlling the movement of an elevator within a building. It uses Verilog hardware description language to model the elevator controller's behavior.
 
 ## Features
 
@@ -37,8 +35,46 @@ The project is simulated using Aldec Riviera-PRO 2022.04. Simulation tests are d
 
 To get started with the project, follow these steps:
 
+## RTL
+   +-------------------------+
+   |                         |
+   |      Elevator           |
+   |      Controller        |
+   |                         |
+   +-----+---------------+---+
+         |               |
+         v               v
+   +-----+---------------+---+
+   |     State Machine        |
+   |                         |
+   |                         |
+   |                         |
+   |                         |
+   +-------------------------+
+         |               |
+         v               v
+   +-----+---+      +--------+
+   |  FSM    |----->| Logic  |
+   |         |<-----| Blocks |
+   +---------+      +--------+
+         |               |
+         v               v
+   +-----+---+      +--------+
+   |  Next  |<-----|   Output  |
+   |  State  |----->| Registers|
+   +---------+      +--------+
+         |
+         v
+   +-----+-----+
+   |   Inputs  |
+   |           |
+   +-----------+
+
+ 
+
+
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/elevator-controller.git
-   cd elevator-controller
+   git clone https://github.com/vikrantIIITD2024/Elevator-Controller-using-Verilog.git
+   cd Elevator-Controller-using-Verilog
